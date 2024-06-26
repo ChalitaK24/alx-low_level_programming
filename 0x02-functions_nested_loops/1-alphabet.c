@@ -13,6 +13,7 @@ void print_alphabet(void)
 	for (lowerc = 97; lowerc <= 122; lowerc++)
 	{
 		_putchar(lowerc);
-		_putchar('\n');
 	}
+	
+	_putchar('\n');
 }
