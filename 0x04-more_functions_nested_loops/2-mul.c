@@ -4,7 +4,7 @@
  * mul - multiplication of two numbers
  * @a: variable one
  * @b: variable two
- * 
+ *
  * Return: 1 success
  */
 
