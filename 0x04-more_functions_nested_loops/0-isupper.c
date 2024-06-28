@@ -3,7 +3,7 @@
 /**
  * _isupper _ checks for upper case
  *
- * @c: variable 
+ * @c: variable
  * Return: 1  success
  */
 
