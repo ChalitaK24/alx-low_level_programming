@@ -4,7 +4,7 @@
  * _puts - prints charcter string
  * @str: character string pointer
  *
- * Return: void 
+ * Return: void
  */
 
 
