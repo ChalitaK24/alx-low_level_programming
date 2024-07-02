@@ -3,17 +3,21 @@
 /**
  * puts2 - pritns every other character of a string
  *
- *
+ * @str: character string
  * Return: void
  */
 
 void puts2(char *str)
 {
-	long int n = 0;
-	while (str[n] != '\0')
+	int n = 0;
+
+	while (str[n] != '\0' && str[n] != '\\')
 	{
-		_putchar(str[n]);
-		n += 2;
+		if (n % 2 == 0)
+		{
+			_putchar(str[n]);
+		}
+		n++;
 	}
 	_putchar('\n');
 }
