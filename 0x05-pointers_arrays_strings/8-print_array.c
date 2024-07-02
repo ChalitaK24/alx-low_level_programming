@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+
 
 /**
  * print_array - prints first n elements of an arry
@@ -14,12 +16,12 @@ void print_array(int *a, int n)
 
 	while (i < n)
 	{
-		_putchar(a[i]);
+		printf("%d", a[i]);
 		if (i < n - 1)
 		{
-			_putchar(44);
+			printf(", ");
 		}
 		i++;
 	}
-	_putchar('\n');
+	printf("\n");
 }
