@@ -6,7 +6,7 @@
  * @b: pointer
  *
  *
- * Return: 0 success
+ * Return: void success
  */
 
 
@@ -15,6 +15,4 @@ void swap_int(int *a, int *b)
 	int m = *a;
 	*a = *b;
 	*b = m;
-
-	return (0);
 }
