@@ -2,14 +2,14 @@
 /**
  * _strncat - links two strings
  *
- * Result: strn
+ * Result: lknd
  */
 
-char *_strncat(char *dest, char *src, int n);
+char *_strncat(char *dest, char *src, int n)
 {
 	char *lknd = dest;
 
-	while (dest != '/0')
+	while (*dest != '\0')
 	{
 		dest++;
 	}
@@ -17,11 +17,11 @@ char *_strncat(char *dest, char *src, int n);
 	while (*src != '\0' && n > 0)
 	{
 		*dest = *src;
-		*dest++;
-		*src++;
+		dest++;
+		src++;
 		n--;
 	}
 	*dest = '\0';
 
-	retrun strn;
+	return lknd;
 }
