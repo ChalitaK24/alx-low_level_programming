@@ -1,8 +1,10 @@
 #include "main.h"
 
 /**
- * _strcpy - copy most of the string
- *
+ * _strncpy - copy most of the string
+ * @dest: string destination
+ * @src: string source
+ * @n: number of char to cpy
  *
  * Return: cpd
  */
