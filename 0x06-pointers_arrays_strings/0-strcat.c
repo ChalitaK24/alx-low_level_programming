@@ -1,6 +1,8 @@
 #include "main.h"
 /**
  * _strcat -links together two stings
+ * @src: string appended from
+ * @dest: string appended to
  *
  * Return: string
  */
@@ -23,5 +25,5 @@ char *_strcat(char *dest, char *src)
 
 	*dest = '\0';
 
-	return lnk;
+	return (lnk);
 }
