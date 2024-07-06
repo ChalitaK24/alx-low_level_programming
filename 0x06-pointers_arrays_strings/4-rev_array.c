@@ -1,7 +1,7 @@
 #include  "main.h"
 
 /**
- * reverse_array -
+ * reverse_array - reversing array of integers
  * @a: an array of integers
  * @n: the number of elements to swap
  *
@@ -16,6 +16,7 @@ void reverse_array(int *a, int n)
 	while (b < z)
 	{
 		int swap = a[b];
+
 		a[b] = a[z];
 		a[z] = swap;
 
