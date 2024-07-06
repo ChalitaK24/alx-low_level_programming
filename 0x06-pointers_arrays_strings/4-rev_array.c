@@ -10,17 +10,21 @@
 
 void reverse_array(int *a, int n)
 {
-	int b = 0;
-	int z = n - 1;
+	int i = 0;
+	int j;
+	int r;
 
-	while (b < z)
+	while (i < n - 1)
 	{
-		int swap = a[b];
-
-		a[b] = a[z];
-		a[z] = swap;
-
-		b++;
-		z++;
+		j = i + 1;
+		
+		while (j > 0)
+		{
+			r = *(a + j);
+			*(a + j) = *(a + (j - 1));
+			*(a + (j - 1)) = r;
+			j--;
+		}
+	i++;
 	}
 }
