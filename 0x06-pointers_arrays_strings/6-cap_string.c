@@ -1,34 +1,33 @@
 #include "main.h"
 #include <ctype.h>
 
-
 /**
- * cap_string - capitalize string
+ * cap_string - capitilizes string
+ * @s: separator characters
  *
- * Retrun: string
+ * Return: s
  */
 
-char *cap_string(char *)
+char *cap_string(char *s)
 {
-	char str;
+	int sep = 0;
 	int i = 0;
-	int upper = 1;
-	
-	for (int i; str[i] != '\0'; i++)
-	{
-		if (isalpha((unsigned char)str[i]))
-		{
-			if (upper)
-			{
-				str[i] = toupper((unsigned char)str[i]);
-				upper = 0;
-			}
-		}
-		else
-		{
-			upper = 1;
-		}
-	}
-	return (str);
-}
 
+	while (s[i] != '\0')
+	{
+		if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' || s[i] == ',' ||
+			s[i] == ';' || s[i] == '.' || s[i] == '!' || s[i] == '?' ||
+			s[i] == '"' || s[i] == '(' || s[i] == ')' || s[i] == '{')
+		{
+			sep++;
+		}
+
+		else if (sep % 2 == 1 && s[i] >= 'a' && s[i] <= 'z')
+		{
+			s[i] = toupper(s[i]);
+		}
+		i++;
+	}
+
+	return (s);
+}
