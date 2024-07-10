@@ -1,0 +1,1 @@
+ptrs arr & str
