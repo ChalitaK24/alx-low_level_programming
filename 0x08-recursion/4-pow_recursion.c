@@ -5,6 +5,7 @@
  * @y: number of times x mulitplies itself
  * @x: number to be multiplied
  *
+ * Return: x
  */
 
 int _pow_recursion(int x, int y)
