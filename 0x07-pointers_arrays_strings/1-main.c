@@ -45,14 +45,3 @@ int main(void)
     simple_print_buffer(buffer, 98);    
     return (0);
 }
-
-{
-    char buffer[] = {"First, solve the problem. Then, write the code."};
-    char buffer2[] = {"Talk is cheap. Show me the code."};
-
-    simple_print_buffer(buffer, );
-    _memcpy(buffer + 12, buffer2 + 10, 12);
-    printf("-------------------------------------------------\n");
-    simple_print_buffer(buffer, 98);
-    return (0);
-}
