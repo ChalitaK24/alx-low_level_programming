@@ -23,17 +23,17 @@ unsigned int _strspn(char *s, char *accept)
 	for (i = 0; i < s_len; i++)
 	{
 		sget = 0;
-		
+
 		for (j = 0; j < accept_len; j++)
 		{
-			if (s[i] == accept [j])
+			if (s[i] == accept[j])
 			{
 				sget = 1;
 				break;
 			}
 		}
 
-		if (sget) 
+		if (sget)
 		{
 			n++;
 		}
