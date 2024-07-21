@@ -2,7 +2,7 @@
 #include <stddef.h>
 
 /**
- * _strpbrk locates first occurance of any
+ * _strpbrk - locates first occurance of any
  * bytes of string 'accept' in string 's'
  * @s: string to be checked
  * @accept: source string to check for
