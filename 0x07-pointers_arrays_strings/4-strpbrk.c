@@ -2,11 +2,12 @@
 #include <stddef.h>
 
 /**
- * _strpbrk locates first occurance of any bytes of string 'accept' in string 's'
+ * _strpbrk locates first occurance of any
+ * bytes of string 'accept' in string 's'
  * @s: string to be checked
  * @accept: source string to check for
  *
- * Return:
+ * Return: pointer if success or NULL
  *
  */
 
@@ -22,9 +23,9 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (s[i] == accept[j])
 			{
-				return(&s[i]);
+				return (&s[i]);
 			}
 		}
 	}
 	return (NULL);
-			
+}
