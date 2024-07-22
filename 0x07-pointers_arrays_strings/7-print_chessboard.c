@@ -3,7 +3,7 @@
 /**
  * print_chessboard - prints chess board with elements
  *
- *
+ * @a: two dimensional sting with 8 rows
  * Returns: void
  *
  */
@@ -18,7 +18,7 @@ void print_chessboard(char (*a)[8])
 		for (c = 0; c < 8; c++)
 		{
 			_putchar(a[r][c]);
-			_putchar('\t');
+
 		}
 		_putchar('\n');
 	}
