@@ -5,7 +5,7 @@
  * print_diagsums - sum of two diagonals
  *
  * @a: string of square matrix of int
- *
+ * @size: size of a row
  * Return: void
  *
  */
