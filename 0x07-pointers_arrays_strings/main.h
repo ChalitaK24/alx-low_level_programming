@@ -5,5 +5,7 @@ char *_memcpy(char *dest, char * src, unsigned int n);
 int _putchar(char c);
 unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
+char *_strchr(char *s, char c);
+
 
 #endif

@@ -1,7 +1,8 @@
 #include "main.h"
 #include <stddef.h>
+
 /**
- * _strchr - locates first occurace of character string
+ * _strchr - locates first occurace of character 'c' string
  * @s: string
  * @c: character
  *
@@ -10,14 +11,15 @@
 
 char *_strchr(char *s, char c)
 {
-	while(*s != '\0')
-	{
-		if (*s == c)
-		{
-			return (s);
-		}
-	}
-	s++;
+	int i = 0;
 
+	while(s[i] != '\0')
+	{
+		if (s[i] == c)
+		{
+			return (&s[i]);
+		}
+		i++;
+	}
 	return (NULL);
 }
