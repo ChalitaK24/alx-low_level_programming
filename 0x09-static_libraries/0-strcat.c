@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _strcat -links together two stings
  * @src: string appended from
