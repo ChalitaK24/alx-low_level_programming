@@ -2,7 +2,8 @@
 
 /**
  * print_name - prints a name as is
- *
+ * @f: pointer to function
+ * @name: char variable
  * Return: name
  */
 
