@@ -8,7 +8,7 @@
  *
  * @action: pointer to a fucntion
  *
- * Return: void
+ * Return: Nothing
  */
 
 void array_iterator(int *array, size_t size, void (*action)(int))
