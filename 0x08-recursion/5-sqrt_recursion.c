@@ -1,29 +1,35 @@
 #include "main.h"
 
 /**
- * _sqrt_recursion - returns the natural squre root of a number
- * @n: input num
+ * findx - checks if x is positive and equals n
+ * @x: integer number poterntial sqrt n
  *
- * Return: sqrt n
+ * @n: positive int
+ * Return: x or -1
  */
 
-int isprime(int number) 
+int findx(int n, int x)
 {
-	int i;
-    if (number < 2) 
-    {
-      	    return 0;
-    }
-
-    for (i = 2; i * i <= number; ++i) 
-    {
-        if (number % i == 0) 
+	if (x * x == n)
 	{
-            return 0; 
-        }
-    }
-    return 1;
+		return (x);
+	}
+	else if (x * x > n)
+	{
+		return (-1);
+	}
+	else
+	{
+		return (findx(n, x + 1));
+	}
 }
+
+/**
+ * _sqrt_recursion - returns the natural squre root of a number
+ * @n: positive integer
+ *
+ * Return: sqrt n or -1
+ */
 
 int _sqrt_recursion(int n)
 {
@@ -31,35 +37,5 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-
-	if (n == 0 || n == 1)
-	{
-		return (n);
-	}
-
-	if (n > 2 && isprime(n))
-	{
-		return (-1);
-	}
-
-	return (_sqrt_recursionx(n, n / 2));
-
-}
-
-int _sqrt_recursionx(int n, int x)
-{
-	if (x * x == n)
-	{
-		return (x);
-	}
-
-	if (x * x > n)
-	{
-		return (_sqrt_recursionx(n, (x + n / x) / 2));
-	}
-
-	else
-	{
-		return (_sqrt_recursionx(n, (x + n / x) / 2));
-	}
+	return (findx(n, 0));
 }
