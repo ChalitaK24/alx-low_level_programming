@@ -4,7 +4,7 @@
 
 /**
  * print_all - prints anything
- *
+ * @format: specifies types of arguments
  *
  * Return: void
  */
@@ -31,7 +31,7 @@ void print_all(const char * const format, ...)
 		}
 		else if (*ptr == 'i')
 		{
-			if (prt) 
+			if (prt)
 			{
 				printf(", ");
 			}
