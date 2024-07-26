@@ -13,9 +13,6 @@
 
 int ch_palindrome(char *s, int a, int z)
 {
-	int a;
-	int z;
-
 	if (a > z)
 	{
 		return (1);
