@@ -1,5 +1,6 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
+#include <stddef.h>
 
 /**
  * print_str - prints NULL strings
@@ -8,33 +9,48 @@
  * Return: void
  */
 
-void print_string(const char *str) {
-    if (str == NULL) {
-        str = "(nil)";
-    }
-    while (*str) {
-        _putchar(*str++);
-    }
+void print_string(const char *str)
+{
+	if (str == NULL)
+	{
+		str = "(nil)";
+	}
+
+	while (*str)
+	{
+	 _putchar(*str++);
+	}
 }
 
-void print_strings(const char *separator, const unsigned int n, ...) {
-    va_list args;
-    va_start(args, n);
+/**
+ * print_strings - prints strings
+ * @n: number of argument
+ *
+ * Return: void
+ */
 
-    for (unsigned int i = 0; i < n; i++) {
-        const char *str = va_arg(args, const char*);
-        print_string(str);
+void print_strings(const char *separator, const unsigned int n, ...)
+{
+	va_list args;
+	unsigned int i = 0;
 
-        if (separator != NULL && i < n - 1) {
-            const char *sep = separator;
-            while (*sep) {
-                _putchar(*sep++);
-            }
-        }
-    }
+	va_start(args, n);
+	
+	while (i < n)
+	{
+		const char *str = va_arg(args, const char*);
+		print_string(str);
 
-    _putchar('\n');
-    va_end(args);
+		if (separator != NULL && i < n - 1)
+		{
+			const char *sep = separator;
+			while (*sep)
+			{
+				_putchar(*sep++);
+			}
+		}
+	}
+	_putchar('\n');
+
+	va_end(args);
 }
-
-
