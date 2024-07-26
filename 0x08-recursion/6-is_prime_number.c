@@ -2,8 +2,8 @@
 
 /**
  * isprime - checks if a number is prime
- * @n: integer number 
- * @i:  divisor 
+ * @n: integer number
+ * @i:  divisor
  *
  * Return: not prime 0 or prime 1
  */
@@ -29,7 +29,7 @@ int isprime(int n, int i)
 		next_i = i + 2;
 	}
 
-	return isprime(n, next_i);
+	return (isprime(n, next_i));
 }
 
 /**
