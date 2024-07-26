@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 /**
- * print_all - prints anything
+ * print_all - print anything func
  * @format: specifies types of arguments
  *
  * Return: void
@@ -12,57 +12,44 @@
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	const char *ptr = format;
+	unsigned int i;
 	char *str;
-	int prt = 0;
+	const char *sep = "";
 
 	va_start(args, format);
 
-	while (ptr && *ptr)
+	for (i = 0; format && format[i]; i++)
 	{
-		if (*ptr == 'c')
+		switch (format[i])
 		{
-			if (prt)
-			{
-				printf(", ");
-			}
-			printf("%c", va_arg(args, int));
-			prt = 1;
-		}
-		else if (*ptr == 'i')
-		{
-			if (prt)
-			{
-				printf(", ");
-			}
-			printf("%d", va_arg(args, int));
-			prt = 1;
-		}
-		else if (*ptr == 'f')
-		{
-			if (prt)
-			{
-				printf(", ");
-			}
-			printf("%f", va_arg(args, double));
-			prt = 1;
-		}
-		else if (*ptr == 's')
-		{
-			if (prt)
-			{
+			case 'c':
+				printf("%s%c", sep, va_arg(args, int));
+				break;
+
+			case 'i':
+				printf("%s%d", sep, va_arg(args, int));
+				break;
+
+			case 'f':
+				printf("%s%f", sep, va_arg(args, double));
+				break;
+
+			case 's':
 				str = va_arg(args, char *);
-			}
-			if (str == NULL)
-				printf("(nil)");
-			else
-				printf("%s", str);
-			prt = 1;
+				if (!str)
+					str = "(nil)";
+				printf("%s%s", sep, str);
+				break;
+
+			default:
+				continue;
 		}
-		ptr++;
+
+		sep = ", ";
 	}
 
 	printf("\n");
 
 	va_end(args);
+
 }
