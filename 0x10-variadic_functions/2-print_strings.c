@@ -1,26 +1,7 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 #include <stddef.h>
-
-/**
- * print_str - prints NULL strings
- * @str: string
- *
- * Return: void
- */
-
-void print_str(const char *str)
-{
-	if (str == NULL)
-	{
-		str = "(nil)";
-	}
-
-	while (*str)
-	{
-		_putchar(*str++);
-	}
-}
+#include <stdio.h>
 
 /**
  * print_strings - prints strings
@@ -38,21 +19,26 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	while (i < n)
 	{
-		const char *str = va_arg(args, const char*);
+		str = va_arg(args, char *);
 
-		print_str(str);
+		if (str == NULL)
+		{
+			printf("(nil)");
+		}
+		else
+		{
+			printf("%s", str);
+		}
 
 		if (separator != NULL && i < n - 1)
 		{
-			const char *sep = separator;
-
-			while (*sep)
-			{
-				_putchar(*sep++);
-			}
+			printf("%s", separator);
 		}
+	
+		i++;
 	}
-	_putchar('\n');
+	printf("\n");
+
 
 	va_end(args);
 }
