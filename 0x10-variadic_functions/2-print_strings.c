@@ -9,7 +9,7 @@
  * Return: void
  */
 
-void print_string(const char *str)
+void print_str(const char *str)
 {
 	if (str == NULL)
 	{
@@ -18,14 +18,14 @@ void print_string(const char *str)
 
 	while (*str)
 	{
-	 _putchar(*str++);
+		_putchar(*str++);
 	}
 }
 
 /**
  * print_strings - prints strings
  * @n: number of argument
- *
+ * @separator: str printed between strings
  * Return: void
  */
 
@@ -35,15 +35,17 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int i = 0;
 
 	va_start(args, n);
-	
+
 	while (i < n)
 	{
 		const char *str = va_arg(args, const char*);
-		print_string(str);
+
+		print_str(str);
 
 		if (separator != NULL && i < n - 1)
 		{
 			const char *sep = separator;
+
 			while (*sep)
 			{
 				_putchar(*sep++);
