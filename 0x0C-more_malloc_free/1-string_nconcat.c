@@ -28,7 +28,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	}
 
-	if (n >= ln1)
+	if (n >= ln2)
 	{
 		n = ln2;
 	}
@@ -40,7 +40,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	strcpy(nestr, s1);
 
-	strncat(nestr, s2, n);
+	strncat(nestr + ln1, s2, n);
 
 	nestr[ln1 + n] = '\0';
 
