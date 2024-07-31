@@ -29,6 +29,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	nestr = malloc(ln1 + n + 1);
 
+	if (nestr == NULL)
+	{
+		return (NULL);
+	}
 	if (s1 != NULL)
 	{
 		strcpy(nestr, s1);
@@ -39,12 +43,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 	if (n >= ln2)
-		n = ln2;
-
-	if (nestr == NULL)
 	{
-		return (NULL);
+		n = ln2;
 	}
+
 	if (s2 != NULL)
 	{
 		strncpy(nestr + ln1, s2, n);
