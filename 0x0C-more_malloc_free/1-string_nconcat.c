@@ -14,35 +14,41 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int ln1 = strlen(s1);
-	unsigned int ln2 = strlen(s2);
-	char *nestr = malloc(ln1 + n + 1);
+	unsigned int ln1, ln2;
+	char *nestr;
 
-	if (s1 == NULL)
+	if (s1 != NULL)
+		ln1 = strlen(s1);
+	else
+		ln1 = 0;
+
+	if (s2 != NULL)
+		ln2 = strlen(s2);
+	else
+		ln2 = 0;
+
+	nestr = malloc(ln1 + n + 1);
+
+	if (s1 != NULL)
 	{
-		s1 = "";
+		strcpy(nestr, s1);
 	}
-
-	if (s2 == NULL)
+	else
 	{
-		s2 = "";
+		nestr[0] ='\0';
 	}
-
+	
 	if (n >= ln2)
-	{
 		n = ln2;
-	}
-
+	
 	if (nestr == NULL)
 	{
 		return (NULL);
 	}
+	if (s2 != NULL)
+	{
+		strncpy(nestr + ln1, s2, n);
 
-	strcpy(nestr, s1);
-
-	strncat(nestr + ln1, s2, n);
-
-	nestr[ln1 + n] = '\0';
-
+	}
 	return (nestr);
 }
