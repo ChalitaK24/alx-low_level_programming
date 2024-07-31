@@ -35,12 +35,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	else
 	{
-		nestr[0] ='\0';
+		nestr[0] = '\0';
 	}
-	
+
 	if (n >= ln2)
 		n = ln2;
-	
+
 	if (nestr == NULL)
 	{
 		return (NULL);
