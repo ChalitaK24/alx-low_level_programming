@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * add_node - adds a new node at the beginning of a list_t list
+ * add_node_end - adds a new node at the beginning of a list_t list
  * @head: ptr to address of head
  * @str: the string to be duplicated
- * Return: NULL or addess 
+ * Return: NULL or addess
  */
 
 list_t *add_node_end(list_t **head, const char *str)
