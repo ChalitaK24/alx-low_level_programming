@@ -3,7 +3,7 @@
 
 /**
  * print_list - prints all elements of a list_t list
- *
+ * @h: node in the linked list
  *
  * Return: clst
  */
