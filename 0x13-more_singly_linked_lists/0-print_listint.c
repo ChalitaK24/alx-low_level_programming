@@ -3,9 +3,9 @@
 
 /**
  * print_listint - prints all the elements of a singly linked list
- * @h: head 
- * @n: integer stored in the node
+ * @h: head
  *
+ * Return: cnode
  */
 
 size_t print_listint(const listint_t *h)
@@ -19,5 +19,5 @@ size_t print_listint(const listint_t *h)
 		cnode++;
 	}
 
-	return cnode;
+	return (cnode);
 }
