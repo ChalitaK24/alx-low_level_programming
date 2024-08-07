@@ -3,7 +3,7 @@
 /**
  * add_nodeint - adds a new node at the beginning of list
  * @head: ptr to pointer to head
- * 
+ * @n: new node
  *
  * Return: new_n or NULL
  */
@@ -16,7 +16,7 @@ listint_t *add_nodeint(listint_t **head, const int n)
 
 	if (node_n == NULL)
 	{
-		return NULL;
+		return (NULL);
 	}
 
 	node_n->n = n;
@@ -24,5 +24,5 @@ listint_t *add_nodeint(listint_t **head, const int n)
 
 	*head = node_n;
 
-	return node_n;
+	return (node_n);
 }
