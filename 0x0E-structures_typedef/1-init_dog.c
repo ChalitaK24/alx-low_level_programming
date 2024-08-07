@@ -4,7 +4,8 @@
  * init_dog - initialize variable
  * @d: ptr struct
  * @name: dog name
- *
+ * @age: ager of dog
+ * @owner: owner of dog
  * Return: void
  */
 
