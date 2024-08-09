@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * binary_to_unint - converts binary into unsigned int
+ * binary_to_uint - converts binary into unsigned int
  * @b: pointer to string of 0 and 1 chars
  *
  * Return: 0 or num
@@ -25,8 +25,8 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 		}
 		else
-		{	num = num * 2;
-			num = b[i] - '0';
+		{
+			num = num * 2 + (b[i] - '0');
 		}
 	}
 
