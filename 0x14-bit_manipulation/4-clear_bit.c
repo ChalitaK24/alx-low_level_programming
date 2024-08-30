@@ -9,7 +9,7 @@
  * Return: 1 success or -1 error
  */
 
-int clear_bit(unsigned long int *n, unsigned index)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
 	if (index >= (sizeof(unsigned long int) * 8))
 	{
