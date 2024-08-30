@@ -3,8 +3,9 @@
 /**
  * get_bit - retrieve the value of a bit at a specific
  * index in an unsigned long integer
- *
- * Retrun: 0 or 1
+ * @n: unsigned int value
+ * @in: index of the unsigned int value
+ * Return: 0 or 1
  */
 
 int get_bit(unsigned long int n, unsigned int in)
